@@ -15,7 +15,21 @@ var currentPoints = 0;
 var wins = 0;
 var losses = 0;
 
+//initialize stats for gems and point goal
+var newGame = function(){
+    pointGoal = Math.floor(Math.random() * (120 - 19)) + 19;
+    console.log(pointGoal);
+    gem1Points = Math.floor(Math.random() * 12)+1;
+    gem2Points = Math.floor(Math.random() * 12)+1;
+    gem3Points = Math.floor(Math.random() * 12)+1;
+    gem4Points = Math.floor(Math.random() * 12)+1;
+    console.log("a "+gem1Points);
+    console.log("b "+gem2Points);
+    console.log("c "+gem3Points);
+    console.log("d "+gem4Points);
+}
 
+newGame();
 
 
 

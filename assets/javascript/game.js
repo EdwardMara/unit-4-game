@@ -11,12 +11,17 @@ var pointGoal;
 //current user points
 var currentPoints = 0;
 
+//how many gems have been collected this round
+var gemsCollected = 0;
+
 //wins and losses
 var wins = 0;
 var losses = 0;
 
 //initialize stats for gems and point goal
 var newGame = function(){
+    gemsCollected = 0;
+    currentPoints = 0;
     pointGoal = Math.floor(Math.random() * (120 - 19)) + 19;
     console.log(pointGoal);
     gem1Points = Math.floor(Math.random() * 12)+1;
@@ -28,6 +33,29 @@ var newGame = function(){
     console.log("c "+gem3Points);
     console.log("d "+gem4Points);
 }
+
+//When a gem is collected (clicked) increase point total by the gems current value and increment gems collected
+$("#button-1").on("click", function() {
+    currentPoints += gem1Points;
+    gemsCollected ++;
+})
+
+$("#button-2").on("click", function() {
+    currentPoints += gem2Points;
+    gemsCollected ++;
+})
+
+$("#button-3").on("click", function() {
+    currentPoints += gem3Points;
+    gemsCollected ++;
+})
+
+$("#button-4").on("click", function() {
+    currentPoints += gem4Points;
+    gemsCollected ++;
+})
+
+
 
 newGame();
 

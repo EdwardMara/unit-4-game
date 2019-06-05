@@ -7,24 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </head>
 
 <body>
-
-    <div class="header">
-        <h1>Crystal Collector</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg bg-primary text-center text-white header">
+                <h1>Crystal Collector</h1>
+            </div>
+        </div>
     </div>
 
-    <div class="instructions">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-            total score.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg bg-secondary text-center text-white instructions">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your
+                    total score.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="stats-container">
+    <div class="container-fluid text-center stats-container">
         <!-- point goal -->
         <div>
             <h3 id="goal"></h3>
@@ -39,7 +50,7 @@
         </div>
     </div>
 
-    <div class="gems">
+    <div class="container-fluid text-center">
         <button id="button-1" class="gem" value="a"><img class="img" src="assets/images/water.png"></button>
         <button id="button-2" class="gem" value="b"><img class="img" src="assets/images/fighting.png"></button>
         <button id="button-3" class="gem" value="c"><img class="img" src="assets/images/lightning.png"></button>

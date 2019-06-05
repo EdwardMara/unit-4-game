@@ -38,21 +38,29 @@ var newGame = function(){
 $("#button-1").on("click", function() {
     currentPoints += gem1Points;
     gemsCollected ++;
+    console.log("current points: "+currentPoints);
+    console.log("gems collected: "+gemsCollected);
 })
 
 $("#button-2").on("click", function() {
     currentPoints += gem2Points;
     gemsCollected ++;
+    console.log("current points: "+currentPoints);
+    console.log("gems collected: "+gemsCollected);
 })
 
 $("#button-3").on("click", function() {
     currentPoints += gem3Points;
     gemsCollected ++;
+    console.log("current points: "+currentPoints);
+    console.log("gems collected: "+gemsCollected);
 })
 
 $("#button-4").on("click", function() {
     currentPoints += gem4Points;
     gemsCollected ++;
+    console.log("current points: "+currentPoints);
+    console.log("gems collected: "+gemsCollected);
 })
 
 

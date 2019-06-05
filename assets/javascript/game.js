@@ -32,7 +32,13 @@ var newGame = function(){
     console.log("b "+gem2Points);
     console.log("c "+gem3Points);
     console.log("d "+gem4Points);
+    $("#goal").text("Goal: "+pointGoal);
+    $("#points").text("Points: "+currentPoints);
+    $("#wins-losses").text("Wins: "+wins+" Losses: "+losses);
 }
+
+   
+
 
 //When a gem is collected (clicked) increase point total by the gems current value and increment gems collected
 $("#button-1").on("click", function() {
@@ -40,6 +46,14 @@ $("#button-1").on("click", function() {
     gemsCollected ++;
     console.log("current points: "+currentPoints);
     console.log("gems collected: "+gemsCollected);
+    $("#points").text("Points: "+currentPoints);
+    if(currentPoints===pointGoal){
+        wins++;
+        newGame();
+    }else if(currentPoints>pointGoal){
+        losses++;
+        newGame();
+    }
 })
 
 $("#button-2").on("click", function() {
@@ -47,6 +61,14 @@ $("#button-2").on("click", function() {
     gemsCollected ++;
     console.log("current points: "+currentPoints);
     console.log("gems collected: "+gemsCollected);
+    $("#points").text("Points: "+currentPoints);
+    if(currentPoints===pointGoal){
+        wins++;
+        newGame();
+    }else if(currentPoints>pointGoal){
+        losses++;
+        newGame();
+    }
 })
 
 $("#button-3").on("click", function() {
@@ -54,6 +76,14 @@ $("#button-3").on("click", function() {
     gemsCollected ++;
     console.log("current points: "+currentPoints);
     console.log("gems collected: "+gemsCollected);
+    $("#points").text("Points: "+currentPoints);
+    if(currentPoints===pointGoal){
+        wins++;
+        newGame();
+    }else if(currentPoints>pointGoal){
+        losses++;
+        newGame();
+    }
 })
 
 $("#button-4").on("click", function() {
@@ -61,11 +91,20 @@ $("#button-4").on("click", function() {
     gemsCollected ++;
     console.log("current points: "+currentPoints);
     console.log("gems collected: "+gemsCollected);
+    $("#points").text("Points: "+currentPoints);
+    if(currentPoints===pointGoal){
+        wins++;
+        newGame();
+    }else if(currentPoints>pointGoal){
+        losses++;
+        newGame();
+    }   
 })
 
 
 
 newGame();
+
 
 
 
